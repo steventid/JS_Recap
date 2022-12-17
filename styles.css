@@ -1,0 +1,126 @@
+body {
+    color: #ffffff;
+    background-color: #30363d;
+    height: 100vh;
+}
+
+h1 {
+    border-style: solid;
+    border-radius: .75em;
+}
+
+button {
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    border-style: solid;
+    border-radius: 5em;
+    margin: .1em;
+}
+
+button:hover {
+    color: aqua;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.contentMenuOpen {
+    animation: .5s forwards contentOpenMenu;
+}
+
+.contentMenuClosed {
+    animation: .5s forwards contentCloseMenu;
+}
+
+.slideIn {
+    animation: .5s forwards slideIn;
+}
+.slideOut {
+    animation: .5s forwards slideOut;
+}
+
+.fadeOut {
+    animation: .25s forwards fadeOut;
+}
+
+.fadeIn {
+    animation: .25s forwards fadeIn;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+}
+
+.visible {
+    opacity: 100;
+}
+
+#content {
+    border-style: solid;
+    border-radius: .75em;
+    text-align: center;
+    margin: .5em 1.5em 0 1.5em;
+    min-height: 95%;
+}
+
+#menuButton {
+    position: relative;
+    left: 9em;
+    top: 1em;
+    rotate: 90deg;
+}
+
+#menuList {
+    position: relative;
+    top: -.75em;
+    width: 7em;
+    align-items: right;
+}
+
+#sideMenu {
+    position: fixed;
+    left: -8.3em;
+    z-index: 5;
+    border-style: solid;
+    border-radius: 1em;
+    padding-right: 1em;
+}
+
+@keyframes contentOpenMenu {
+    from {margin: .5em 1.5em 0 1.5em;}
+    to {margin: .5em 1.5em 0 9.7em;}
+}
+
+@keyframes contentCloseMenu {
+    from {margin: .5em 1.5em 0 9.7em;}
+    to {margin: .5em 1.5em 0 1.5em;}
+}
+
+@keyframes slideIn {
+    from {left: -8.3em;}
+    to {left: 0em;}
+}
+
+@keyframes slideOut {
+    from {left: 0em;}
+    to {left: -8.3em;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 100;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
